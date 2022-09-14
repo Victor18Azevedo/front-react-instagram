@@ -6,9 +6,15 @@ const storyUserName = "9gang";
 export default function Story() {
   return (
     <div class="story">
-      <img src={storyCircle} class="story__circle" alt="Story" />
-      <img src={storyUserPicture} class="story__img" alt="Profile Picture" />
-      <span class="stories__user">{storyUserName}</span>
+      <div class="story__box">
+        <img
+          src={storyUserPicture}
+          class="story__img"
+          alt="Não foi possível carregar imagem"
+        />
+        <img src={storyCircle} class="story__circle" alt="Story" />
+      </div>
+      <span class="story__user">{storyUserName}</span>
     </div>
   );
 }

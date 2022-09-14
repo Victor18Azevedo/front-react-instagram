@@ -5,11 +5,15 @@ const userNickName = "Catana";
 
 export default function User() {
   return (
-    <div class="user-profile">
+    <div class="user__profile">
       <img src={userPicture} alt="Não foi possível carregar imagem" />
       <div>
-        <h2>{userName}</h2>
-        <h3>{userNickName}</h3>
+        <p class="user__name">{userName}</p>
+        <span class="user__nickname">{userNickName}</span>
+        <ion-icon
+          class="btn edit__btn icon--mini"
+          name="pencil-outline"
+        ></ion-icon>
       </div>
     </div>
   );

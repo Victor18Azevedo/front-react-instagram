@@ -4,8 +4,8 @@ export default function Sugestions() {
   return (
     <section class="sugestions">
       <div class="sugestion">
-        <h4>Sugestões para você</h4>
-        <span>Ver tudo</span>
+        <p class="sugestion-text">Sugestões para você</p>
+        <span class="sugestion--contrast">Ver tudo</span>
       </div>
       <Sugestion />
       <Sugestion />

@@ -11,7 +11,10 @@ export default function Stories() {
       <Story />
       <Story />
       <Story />
-      <ion-icon class="stories__btn" name="chevron-forward-circle"></ion-icon>
+      <ion-icon
+        class="btn stories__btn"
+        name="chevron-forward-circle"
+      ></ion-icon>
     </div>
   );
 }

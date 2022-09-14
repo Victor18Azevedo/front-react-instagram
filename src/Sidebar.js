@@ -11,7 +11,7 @@ export default function Sidebar() {
           Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
           Localizações • Contas mais relevantes • Hashtags • Idioma
         </p>
-        <p>© 2021 INSTAGRAM DO FACEBOOK</p>
+        <p>Inpirado no INSTAGRAM DO FACEBOOK ©</p>
       </div>
     </aside>
   );
