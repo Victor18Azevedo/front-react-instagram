@@ -9,7 +9,7 @@ export default function Sugestion() {
         <img
           class="follower-img"
           src={sugestionUserPicture}
-          alt="Não foi possível carregar iamgem"
+          alt="Não foi possível carregar imagem"
         />
         <div>
           <h2 class="follower-name">{sugestionUserName}</h2>

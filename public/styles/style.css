@@ -114,7 +114,7 @@ h4 {
 /* FIM HEADER */
 
 /* POSTS */
-.main {
+.body {
   width: 935px;
   margin: 88px auto 0px auto;
   display: flex;
@@ -305,7 +305,7 @@ h4 {
 }
 
 /* SIDEBAR */
-.sugestions__container {
+.sidebar__container {
   width: 293px;
   padding-right: 10px;
 }
@@ -317,12 +317,12 @@ h4 {
   gap: 15px;
 }
 
-.sugestions__header img {
+.user-profile img {
   border-radius: 100%;
   height: 56px;
 }
 
-.sugestions__header h3 {
+.user-profile h3 {
   font-weight: 300;
   color: #8e8e8e;
   line-height: 1.5;
@@ -358,7 +358,7 @@ h4 {
   color: #139ef2;
 }
 
-.sugestions__footer p {
+.sidebar__footer p {
   color: #c7c7c7;
   font-size: 11px;
   font-weight: 400;
@@ -374,12 +374,12 @@ footer {
     width: 100%;
   }
 
-  .main {
+  .body {
     width: 100%;
     justify-content: center;
   }
 
-  .sugestions__container {
+  .sidebar__container {
     display: none;
   }
 }
@@ -395,6 +395,7 @@ footer {
 
   .logo-icon {
     border: none;
+    padding-right: 0;
   }
 
   .navbar__search {
@@ -413,7 +414,7 @@ footer {
     display: initial;
   }
 
-  .main {
+  .body {
     margin: 54px auto 54px auto;
   }
 

@@ -1,17 +1,15 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
-import Sugestions from "./Sugestions";
+import Sidebar from "./Sidebar";
 
 export default function Body() {
   return (
-    <div class="main">
+    <div class="body">
       <aside class="main__container">
         <Stories />
         <Posts />
       </aside>
-      <aside class="sugestions__container">
-        <Sugestions />
-      </aside>
+      <Sidebar />
     </div>
   );
 }

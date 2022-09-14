@@ -10,7 +10,11 @@ export default function Post() {
     <div class="post">
       <div class="post__header">
         <div class="post__profile">
-          <img class="profile-img" src={postUserPicture} alt="" />
+          <img
+            class="profile-img"
+            src={postUserPicture}
+            alt="Não foi possível carregar imagem"
+          />
           <h2 class="profile-name">{postUserName}</h2>
         </div>
         <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -18,7 +22,7 @@ export default function Post() {
       <img
         class="post__img"
         src={postContents}
-        alt="Não foi possível carregar iamgem"
+        alt="Não foi possível carregar conteudo"
       />
       <div class="post__footer">
         <div class="post-menu">
@@ -32,7 +36,7 @@ export default function Post() {
         <div class="post-likes">
           <img
             src={postLikeUserPicture}
-            alt="Não foi possível carregar iamgem"
+            alt="Não foi possível carregar imagem"
           />
           <p>
             Curtido por <strong>{postLikeUserName}</strong> e
