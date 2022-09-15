@@ -2,9 +2,19 @@ import User from "./User";
 import Sugestions from "./Sugestions";
 
 export default function Sidebar() {
+  const user = {
+    name: "victorazevedo",
+    profileName: "Victor Azevedo",
+    profilePicture: "./assets/images/profile-victor.jpg",
+  };
+
   return (
     <aside class="sidebar__container">
-      <User />
+      <User
+        name={user.name}
+        profileName={user.profileName}
+        profilePicture={user.profilePicture}
+      />
       <Sugestions />
       <div class="sidebar__footer">
         <p>

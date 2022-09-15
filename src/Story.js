@@ -1,20 +1,19 @@
-import storyCircle from "./assets/stories_background.jpg";
-import storyUserPicture from "./assets/profile-9gang.png";
-
-const storyUserName = "9gang";
-
-export default function Story() {
+export default function Story(props) {
   return (
-    <div class="story">
+    <li class="story">
       <div class="story__box">
         <img
-          src={storyUserPicture}
+          src={props.image}
           class="story__img"
           alt="Não foi possível carregar imagem"
         />
-        <img src={storyCircle} class="story__circle" alt="Story" />
+        <img
+          src="./assets/images/stories_background.jpg"
+          class="story__circle"
+          alt="Story"
+        />
       </div>
-      <span class="story__user">{storyUserName}</span>
-    </div>
+      <span class="story__user">{props.name}</span>
+    </li>
   );
 }

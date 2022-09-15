@@ -1,6 +1,6 @@
-import logo from "./assets/logo.png";
-
 export default function Navbar() {
+  const logo = "./assets/images/logo.png";
+
   return (
     <header class="navbar">
       <div class="navbar__container">
