@@ -7,7 +7,7 @@ export default function Sugestion(props) {
           src={props.image}
           alt="Não foi possível carregar imagem"
         />
-        <div>
+        <div class="follower__box-text">
           <p class="follower-name">{props.name}</p>
           <span class="follower-text">Segue você</span>
         </div>

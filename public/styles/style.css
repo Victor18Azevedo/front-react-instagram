@@ -279,14 +279,14 @@ ion-icon {
   padding: 0.875rem;
 }
 
-.post__menu {
+.post__option {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.post__menu > div {
+.post__option-list {
   display: flex;
   gap: 0.875rem;
 }
@@ -333,10 +333,15 @@ ion-icon {
   height: 3.5rem;
   object-fit: cover;
   border-radius: 100%;
+  flex-shrink: 0;
 }
 
 .user__picture:hover {
   cursor: pointer;
+}
+
+.user__profile-text {
+  overflow: clip;
 }
 
 .user__name {
@@ -346,6 +351,7 @@ ion-icon {
 }
 
 .user__nickname {
+  width: 100%;
   color: #8e8e8e;
   font-size: 0.875rem;
   font-weight: 300;
@@ -401,6 +407,11 @@ ion-icon {
   height: 2.25rem;
   object-fit: cover;
   border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.follower__box-text {
+  overflow: clip;
 }
 
 .follower-name {

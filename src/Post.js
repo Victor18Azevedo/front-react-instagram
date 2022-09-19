@@ -1,4 +1,28 @@
+import React, { useState } from "react";
+
 export default function Post(props) {
+  const iconsLikeType = [
+    { name: "heart-outline", class: "icon--medium md hydrated" },
+    { name: "heart", class: "icon--medium icon--red md hydrated" },
+  ];
+
+  const [likeCount, setLikeCount] = useState(props.likeCount);
+  const [isLiked, setIsLiked] = useState(false);
+  const [iconLike, setIconLike] = useState(iconsLikeType[0]);
+  const [isSaved, setIsSaved] = useState(false);
+  const [iconSave, setIconSave] = useState("bookmark-outline");
+
+  const refreshLikeCount = () => {
+    setIsLiked(isLiked ? false : true);
+    setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
+    setIconLike(isLiked ? iconsLikeType[0] : iconsLikeType[1]);
+  };
+
+  const refreshPostSave = () => {
+    setIsSaved(isSaved ? false : true);
+    setIconSave(isSaved ? "bookmark-outline" : "bookmark");
+  };
+
   return (
     <li class="post">
       <div class="post__header">
@@ -16,26 +40,30 @@ export default function Post(props) {
         class="post__img click"
         src={props.post}
         alt="Não foi possível carregar conteudo"
+        onClick={refreshLikeCount}
       />
       <div class="post__footer">
-        <div class="post__menu">
-          <div>
-            <ion-icon
-              name="heart-outline"
-              class="icon--medium hidden"
-            ></ion-icon>
-            <ion-icon name="heart" class="icon--medium icon--red"></ion-icon>
-            <ion-icon
-              name="chatbubble-outline"
-              class="icon--medium btn"
-            ></ion-icon>
-            <ion-icon
-              name="paper-plane-outline"
-              class="icon--medium btn"
-            ></ion-icon>
+        <div class="post__option">
+          <ul class="post__option-list">
+            <li onClick={refreshLikeCount}>
+              <ion-icon name={iconLike.name} class={iconLike.class}></ion-icon>
+            </li>
+            <li>
+              <ion-icon
+                name="chatbubble-outline"
+                class="icon--medium btn"
+              ></ion-icon>
+            </li>
+            <li>
+              <ion-icon
+                name="paper-plane-outline"
+                class="icon--medium btn"
+              ></ion-icon>
+            </li>
+          </ul>
+          <div onClick={refreshPostSave}>
+            <ion-icon name={iconSave} class="icon--medium "></ion-icon>
           </div>
-          <ion-icon name="bookmark-outline" class="icon--medium "></ion-icon>
-          <ion-icon name="bookmark" class="icon--medium hidden"></ion-icon>
         </div>
         <div class="post__likes">
           <img
@@ -49,7 +77,7 @@ export default function Post(props) {
               {" "}
               outras{" "}
               <span className="likes-count">
-                {props.likeCount.toLocaleString("pt-BR")}
+                {likeCount.toLocaleString("pt-BR")}
               </span>{" "}
               pessoas
             </strong>
