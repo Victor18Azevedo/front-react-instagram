@@ -5,19 +5,13 @@ export default function User(props) {
   const [profilePicture, setProfilePicture] = useState(props.profilePicture);
 
   const changeProfileName = () => {
-    setProfileName(() => {
-      let name = prompt("Digite o novo nome do Perfil");
-      name = name === "" ? props.profileName : name;
-      return name;
-    });
+    let name = prompt("Digite o novo nome do Perfil");
+    setProfileName(!name ? props.profileName : name);
   };
 
   const changeProfilePicture = () => {
-    setProfilePicture(() => {
-      let img = prompt("Insira a URL da Foto de Pefil");
-      img = img === "" ? props.profilePicture : img;
-      return img;
-    });
+    let img = prompt("Insira a URL da Foto de Pefil");
+    setProfilePicture(!img ? props.profilePicture : img);
   };
 
   return (
